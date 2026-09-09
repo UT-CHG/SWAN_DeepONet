@@ -1,0 +1,52 @@
+$************ HEADING ***************************************
+$
+PROJ '2d_DON_DUCK' '1'
+$
+$********** MODEL INPUT *************************************
+$
+SET LEVEL = 0.11
+SET NAUTICAL
+MODE STAT TWOD
+CGRID 1128.66 -1597.47 20. 1700. 5000. 136 50 CIRC 36 0.0444 0.6 53 
+
+$
+INPGRID BOTTOM 55.16 1523.58 290. 118 122 13.4532 13.4532  
+READINP BOTTOM 1. 'f71del01.bot' 1 
+
+WIND 8 225
+
+$
+BOUN SHAPE JON PEAK DSPR POWer
+BOUN SIDE NE CCW CON PAR 1.6 10.718 160 2.
+
+$
+BOUN SHAPE JON PEAK DSPR DEGR
+BOUN SIDE SE CLOCKW VAR PAR 1000. 1.63 10.5 88. 22.
+$
+BOUN SHAPE JON PEAK DSPR DEGR
+BOUN SIDE NW CCW    VAR PAR 1000. 1.63 10.5 88. 22.
+
+$
+include 'physics.swn'
+$
+$************ OUTPUT REQUESTS *************************
+TAB'COMPGRID' NOHEADER '2d_duck_depth.tab' DEPth
+TAB 'COMPGRID' NOHEADER '2d_duck_hsig.txt' HSign
+TAB 'COMPGRID' NOHEADER '2d_duck_RTP.txt' RTP
+TAB 'COMPGRID' NOHEADER '2d_duck_meandir.txt' DIR  
+TAB 'COMPGRID' NOHEADER '2d_duck_xp.txt' XP
+TAB 'COMPGRID' NOHEADER '2d_duck_yp.txt' YP
+TAB 'COMPGRID' NOHEADER '2d_duck_forces.txt' FORce
+TAB 'COMPGRID' NOHEADER '2d_duck_waterlevel.txt' WATLEV
+TAB 'COMPGRID' NOHEADER '2d_duck_bottomlevel.txt' BOTLEV
+
+$POINTS 'BUOYS' FILE   'f71deli.loc' 
+$TABLE  'BUOYS' HEAD   'f71del01.tbl' HS RTP TM01 TM02 FSPR
+$TABLE  'BUOYS' HEAD   'f71del01.tab' DIST DEP HS RTP TM01 TM02 FSPR DIR SETUP
+$SPEC   'BUOYS' SPEC1D 'f71del01.spc'
+
+$
+TEST 0 0
+POOL
+COMPUTE
+STOP
