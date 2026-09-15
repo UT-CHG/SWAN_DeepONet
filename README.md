@@ -57,7 +57,7 @@ NeuralOperator-CoastalWaves/
 ### Data on DesignSafe 
 
 Download these from **PRJ-6235** and place them at the repository root. They are on the
-> [**DesignSafe-CI Data Depot**](https://doi.org/10.17603/DS2-DKHW-PT40) under project
+> **DesignSafe Data Depot** under project
 > [**PRJ-6235**](https://doi.org/10.17603/DS2-DKHW-PT40) —
 > *Operator Learning for Predicting Bulk Wave Parameters of Spectral Wave Models*.
 
@@ -110,5 +110,16 @@ dataset (PRJ-6235).
   issn = {0029-8018},
   doi = {https://doi.org/10.1016/j.oceaneng.2026.127866},
   url = {https://www.sciencedirect.com/science/article/pii/S0029801826037005}
+}
+
+```bibtex
+@misc{
+  title     = {Operator Learning for Predicting Bulk Wave Parameters of Spectral Wave Models[Dataset]},
+  author    = {Cai, Shukai and Dutta, Sourav and Loveland, Mark and Valseth, Eirik and
+               Rivera-Casillas, Peter and Trahan, Corey and Dawson, Clinton N.},
+  publisher = {DesignSafe-CI},
+  year      = {2026},
+  doi       = {10.17603/DS2-DKHW-PT40},
+  url       = {https://doi.org/10.17603/DS2-DKHW-PT40}
 }
 ```
