@@ -42,7 +42,6 @@ NeuralOperator-CoastalWaves/
 #   sampling_sensitivity_models/ Model set for the sampling-sensitivity study
 ```
 
-## Repository structure
 
 | Path | Description |
 |------|-------------|
@@ -55,9 +54,12 @@ NeuralOperator-CoastalWaves/
 | `swan_data_generation/` | SWAN control files (`*.swn`), bathymetry, and scripts used to generate the training data. |
 | `Models/scripts/` | Training scripts for the neural-operator models (trained weights live on DesignSafe). |
 
-### Assets hosted on DesignSafe 
+### Data on DesignSafe 
 
-Download these from **PRJ-6235** and place them at the repository root:
+Download these from **PRJ-6235** and place them at the repository root. They are on the
+> [**DesignSafe-CI Data Depot**](https://doi.org/10.17603/DS2-DKHW-PT40) under project
+> [**PRJ-6235**](https://doi.org/10.17603/DS2-DKHW-PT40) —
+> *Operator Learning for Predicting Bulk Wave Parameters of Spectral Wave Models*.
 
 | Path | Contents |
 |------|----------|
@@ -102,6 +104,11 @@ dataset (PRJ-6235).
   title   = {Operator Learning for Predicting Bulk Wave Parameters of Spectral Wave Models},
   author  = {Shukai Cai, Sourav Dutta, Mark Loveland, Eirik Valseth, Peter Rivera-Casillas, Corey Trahan, Clint Dawson},
   journal = {Ocean Engineering},
-  year    = {2026}
+  volume = {367},
+  pages = {127866},
+  year = {2026},
+  issn = {0029-8018},
+  doi = {https://doi.org/10.1016/j.oceaneng.2026.127866},
+  url = {https://www.sciencedirect.com/science/article/pii/S0029801826037005}
 }
 ```
